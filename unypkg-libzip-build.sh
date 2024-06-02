@@ -80,7 +80,10 @@ unset LD_RUN_PATH
 mkdir build
 cd build || exit
 
-cmake ..
+cmake \
+    -DCMAKE_INSTALL_PREFIX=/uny/pkg/"$pkgname"/"$pkgver" \
+    -DCMAKE_INSTALL_LIBDIR=lib \ 
+    ..
 
 make -j"$(nproc)"
 make -j"$(nproc)" test
