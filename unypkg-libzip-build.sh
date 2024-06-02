@@ -82,8 +82,7 @@ cd build || exit
 
 cmake \
     -DCMAKE_INSTALL_PREFIX=/uny/pkg/"$pkgname"/"$pkgver" \
-    -DCMAKE_INSTALL_LIBDIR=lib \ 
-    ..
+    -DCMAKE_INSTALL_LIBDIR=lib ..
 
 make -j"$(nproc)"
 make -j"$(nproc)" test
